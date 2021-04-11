@@ -1,0 +1,1 @@
+<button type="button" onclick='document.getElementById("nom").innerHTML = " malik "' >clique ici !</button>

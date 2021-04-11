@@ -4,27 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body style="text-align: center; background-color: powderblue">
-    <h1 style="text-align: center; font-size: 50px; color: purple">
-      Hello world !
-    </h1>
+  <body>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#Formations">Foramtions</a></li>
+      <li><a href="#Stages">Stages</a></li>
+      <li><a href="#Projets perso">projets perso</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+   
+    <button type="button" onclick="document.getElementById('date').innerHTML=Date()">date du jour</button>
+    <p id="date"></p>
+    <h1>Hello world !</h1> 
+   
+    <!-- ce ci est un commentaire  -->
+    <p id ="nom">Tu veux connaitre mon nom ? </p>
+
+    <button type="button" onclick='document.getElementById("nom").innerHTML = " malik "' >clique ici !</button>
+     <!-- pictures ans buttons -->
     <p>
       welcome to <i> my website </i>, I just get started and you see !<br />
       I use a lot of laptops <strong> hihihi</strong>, yes I know I am
-      <b> smart :)</b> <br />
-      <br />
-
-      <img
-        src="https://png2.cleanpng.com/sh/7792b5cd85a4024274d32317c3d2c659/L0KzQYm3UsA1N5dmiZH0aYP2gLBuTfNwdaF6jNd7LYD1f7j5gf1ucZ9sReJ7b3f1cb70hgIua51uiJ9qcoSwc7FrhgIueJ9sRdhybHWwRbKAVBJjPGc7fasBY0KxQ4e3Vsg3PGU2TaMCN0m5QYe9VMU0NqFzf3==/kisspng-computer-programming-programmer-clip-art-coder-png-file-5a77bb466e96c2.360686441517796166453.png"
+      <b> smart :)</b> <br /> <br /> <br />
+      <button onclick='document.getElementById("myimage").src="Images/bebe_codding.JPG"'> me when I was babe</button>
+      <button type="button" onclick='document.getElementById("myimage").src="Images/cartton_use_lot_pc.png"'>me now!</button>
+      <button type="button" onclick='document.getElementById("myimage").style.display="none"'>hide image</button>
+      <button type="button" onclick='document.getElementById("myimage").style.display="inline"'>show image image</button>
+      <img id="myimage"
+        src="Images/cartton_use_lot_pc.png"
         alt="anonymos image "
         width="300"
       />
     </p>
-    <h1 style="text-align: center" title="This is my user name ">Good-one33</h1>
+
+
+    <h2>Good-one33</h2>
+    <!--table -->
     <p>
+      
+      <div>
+      <table>
+        <tr>
+          <th> Formations </th>
+          <th>stages </th>
+          <th>projets perso</th>
+        </tr>
+        <tr>
+          <td> master mécanique</td>
+          <td> sonatrach</td>
+          <td>support telephone</td>
+        </tr>
+      </table>
+    </div>
       this is my username , yeah <sub> snap </sub> <sup>insta</sup> or even
       <mark> github</mark>
     </p>
@@ -33,7 +68,12 @@
     your dear friend : <em>Malik</em>
     <br />
     <br />
-    <a href="https://www.linkedin.com/in/abdelmalek-benali-33ab42178/">
+    <!-- linkedin link !-->
+    <a
+      href="https://www.linkedin.com/in/abdelmalek-benali-33ab42178/"
+      target="_blank"
+      title="Go to my linkedin page"
+    >
       <img src="Images/logo_linkedin.png" alt="logo linkedin" width="50" />
     </a>
     <hr />
