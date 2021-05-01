@@ -1,3 +1,29 @@
+/* contenu sous forme de boites */
+div#content {
+  background-color: black;
+}
+div#content div {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+}
+div#content div.leftBox {
+  background-color: burlywood;
+}
+div#content div.rightBox {
+  background-color: thistle;
+}
+div#content div h1,
+p,
+iframe {
+  margin: 35px;
+}
+
+div#content div.leftBox div.annonce {
+  background-color: blueviolet;
+  width: 100%;
+  margin: 10px;
+}
 /* menu de navigation  */
 nav.menu_nav ul li.btn {
   list-style-type: none;
