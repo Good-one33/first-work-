@@ -6,44 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- link for font fmily  -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Dekko"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- Haut de page   -->
-    <header>
-      <!-- Menu de navigation  -->
-      <nav class="menu_nav">
-        <ul>
-          <li class="btn"><a href="#">Acceuil</a></li>
-          <li class="btn"><a href="Formation.html">Formation</a></li>
-          <li class="btn"><a href="Stages.html">Stages</a></li>
-          <li class="btn"><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <br />
-
-    <!-- Contenu sous forme de boites -->
-    <!-- <div id="content">
-      <div class="leftBox">
-        <h1>left box</h1>
+    <div class="element">
+      <div class="diapo">
+        <h1>1</h1>
+        <h1>2</h1>
+        <h1>3</h1>
+        <h1>4</h1>
+        <h1>5</h1>
+        <h1>6</h1>
       </div>
-      <div class="rightBox">
-        <h1>right box</h1>
+      <div class="description">
+        <div class="text">
+          <p>A Collapsible:</p>
+          <button type="button" class="collapsible">Open Collapsible</button>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <button type="button" class="collapsible">Open Section 1</button>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <button type="button" class="collapsible">Open Section 2</button>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <button type="button" class="collapsible">Open Section 3</button>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div class="boutons">
+          <button>English</button>
+          <button>French</button>
+        </div>
       </div>
-    </div> -->
+    </div>
 
-    <br />
-    <br />
-    <br />
-    <h1>Benali Abdelmalek</h1>
-    <!-- Pied de page  -->
-    <footer>
-      <p>Copyright&copy; Malik All Right Reserved</p>
-    </footer>
+    <div class="wrapper">
+      <div class="letter">
+        <div class="letter">A</div>
+        <div class="letter">B</div>
+      </div>
+      <div class="letter">B</div>
+      <div class="letter">C</div>
+      <div class="letter">D</div>
+      <div class="letter"></div>
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
