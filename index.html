@@ -8,51 +8,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- header -->
+    <!-- header ------------------------->
     <div class="header">
+      <div class="navbar">
+        <a href="#">Link 1 </a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3 </a>
+        <a href="#">Link 4</a>
+      </div>
       <h1>My Website</h1>
       <p>A website created by me.</p>
+      <!-- navigation  bar  -->
     </div>
 
-    <!-- navigation  bar  -->
-    <div class="navbar">
-      <a href="#">Link 1 </a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3 </a>
-      <a href="#" class="right">Link 4</a>
+    <!-- main ---------------------------->
+    <div class="main">
+      <div id="test">
+        <h1>this is just the begining :)</h1>
+      </div>
+      <div class="left">
+        <div class="element"></div>
+        <div class="element"></div>
+      </div>
+      <div class="right">
+        <div id="elt_1" class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+        <div class="element"></div>
+      </div>
     </div>
 
-    <div class="row">
-      <div class="side">
-        <h2>About Me</h2>
-        <h5>Photo of me:</h5>
-        <div class="fakeimg" style="height: 200px">Image</div>
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-        <h3>More Text</h3>
-        <p>Lorem ipsum dolor sit ame.</p>
-        <div class="fakeimg" style="height: 60px">Image</div>
-        <br />
-        <div class="fakeimg" style="height: 60px">Image</div>
-        <br />
-        <div class="fakeimg" style="height: 60px">Image</div>
-      </div>
-      <div class="main">
-        <div class="container">
-          <div id="elt_1" class="element"></div>
-          <div id="test">
-            <h1>this is just the begining :)</h1>
-          </div>
-          <div class="element"></div>
-        </div>
-      </div>
-    </div>
+    <!-- Footer ------------------------->
     <div class="footer">
       <h2>Footer</h2>
     </div>
 
     <script>
-      document.getElementById("elt_1").addEventListener("click", displayItem);
       var testBox = document.getElementById("test");
+      document.getElementById("elt_1").addEventListener("click", displayItem);
+      document.getElementById("test").addEventListener("click", displayItem);
       function displayItem() {
         if (testBox.style.display === "block") {
           testBox.style.display = "none";
@@ -60,11 +55,6 @@
           testBox.style.display = "block";
         }
       }
-      // document.getElementById("test").addEventListener("click", off);
-
-      // function off() {
-      //   document.getElementById("test").style.display = "none";
-      // }
     </script>
   </body>
 </html>
