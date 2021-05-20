@@ -58,7 +58,7 @@ body {
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 1rem;
-  background-color: rgba(102, 48, 48, 0.5);
+  background-color: rgba(9, 2, 2, 0.5);
   border-radius: 10px;
   justify-content: center;
   width: 100%;
@@ -88,9 +88,8 @@ body {
   cursor: pointer;
 }
 .element:hover {
-  background-color: rgb(100, 10, 54);
-  box-shadow: 0 4px 20px 0 rgba(63, 148, 194, 0.666),
-    0 6px 20px 0 rgba(196, 24, 24, 0.789);
+  background-color: rgba(8, 29, 51, 0.898);
+  box-shadow: 5px 10px 20px 0 rgba(38, 166, 175, 0.789);
 }
 
 #test {
@@ -115,9 +114,9 @@ body {
 }
 /* Footer */
 .footer {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
-  background: rgb(17, 62, 79);
+  background: rgba(41, 40, 44, 0.85);
 }
 
 /* Slideshow container */
