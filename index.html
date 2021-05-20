@@ -19,7 +19,6 @@
         <a href="#">Home </a>
         <a href="#">3D Printing</a>
         <a href="#">black box </a>
-        <a href="#">Link 4</a>
       </div>
       <h1>My Website</h1>
       <p>A website created by me.</p>
@@ -28,6 +27,7 @@
     <!-- main ---------------------------->
     <div class="main">
       <div id="test">
+        <div id="close">x</div>
         <div class="slideshow-container">
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
@@ -38,7 +38,6 @@
             />
             <div class="text">Caption Text</div>
           </div>
-
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
             <img
@@ -47,7 +46,6 @@
             />
             <div class="text">Caption Two</div>
           </div>
-
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
             <img
@@ -69,6 +67,28 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+        <h1>my internship</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          fugiat tempora consectetur asperiores aliquam impedit veniam eos natus
+          pariatur saepe, nesciunt facilis eaque labore enim dolorum ad id
+          ratione debitis. Earum nulla odit animi aut alias maiores consequuntur
+          tempore ut nemo accusantium, necessitatibus placeat quibusdam enim
+          reprehenderit ipsa, at magnam? Modi velit harum voluptatibus beatae
+          eos maiores pariatur id exercitationem! Vel voluptatum quod hic cumque
+          in odio fugit tempore tempora temporibus delectus! Odio dolorem nihil
+          ullam porro placeat nam aut omnis pariatur beatae consequatur. Ex id
+          cumque excepturi omnis ullam. Saepe veritatis asperiores, adipisci
+          quam porro alias facilis et qui nemo sint officia veniam earum
+          recusandae odio architecto hic. Hic debitis assumenda ad deserunt
+          velit tenetur. Eaque provident inventore quis. Quo totam et, vitae ab
+          autem voluptatem laboriosam recusandae quos sequi nesciunt maxime
+          expedita vel facere harum fuga. Aspernatur assumenda sunt obcaecati
+          aperiam, officia nulla veritatis odio id animi eos. Vel ex totam
+          expedita voluptates harum omnis sit excepturi ipsum. Tempora deserunt
+          id at, eos minima non? Doloremque voluptatem necessitatibus molestiae
+          suscipit tenetur, ullam assumenda sint dolorum iure ad libero.
+        </p>
       </div>
       <!-- left -------------------------->
       <div class="left">
@@ -93,7 +113,7 @@
     <script>
       var testBox = document.getElementById("test");
       document.getElementById("elt_1").addEventListener("click", displayItem);
-      // document.getElementById("test").addEventListener("click", displayItem);
+      document.getElementById("close").addEventListener("click", displayItem);
       function displayItem() {
         if (testBox.style.display === "block") {
           testBox.style.display = "none";
@@ -119,12 +139,14 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
+        // si on arrive ou bout on revient a l'autre  bout
         if (n > slides.length) {
           slideIndex = 1;
         }
         if (n < 1) {
           slideIndex = slides.length;
         }
+        // on cache toutes les images et les points  et on affiche qu'une seuls
         for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
