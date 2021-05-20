@@ -89,6 +89,8 @@ body {
 }
 .element:hover {
   background-color: rgb(100, 10, 54);
+  box-shadow: 0 4px 20px 0 rgba(63, 148, 194, 0.666),
+    0 6px 20px 0 rgba(196, 24, 24, 0.789);
 }
 
 #test {
