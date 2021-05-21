@@ -108,6 +108,7 @@ body {
   cursor: pointer;
   padding: 18px;
   width: 250px;
+  border: none;
   text-align: left;
   font-size: 15px;
   border-radius: 5px;
