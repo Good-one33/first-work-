@@ -1,0 +1,59 @@
+/* Style the top navigation bar */
+.navbar {
+  position: fixed;
+  display: flex;
+  column-gap: 3px;
+  flex-direction: row;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: rgb(255, 254, 254);
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(130, 25, 11);
+  border-radius: 15px;
+  padding: 1px 10px 1px 10px;
+  background: rgb(3, 3, 4);
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body,
+html {
+  height: 100%;
+}
+
+.bgimg {
+  z-index: -100;
+  /* Background image */
+  background-image: url("Images/3Dprinting/bg_image.jpg");
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: rgba(255, 255, 255, 0.857);
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+  width: 100%;
+}

@@ -61,11 +61,12 @@ body {
     black
   );
   color: rgb(10, 10, 10);
-  border-radius: 1rem;
+  border-radius: 8px;
   padding: 2rem;
-  width: 100px;
   box-shadow: -2px 4px 15px 10px rgba(0, 0, 0, 0.809);
   transition: 0.2s;
+  height: 150px;
+  width: 100px;
 }
 .card:not(:first-child) {
   margin-left: -5rem;
