@@ -18,42 +18,26 @@
 }
 
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  d
+
 }
 
 .bgimg {
-  z-index: -100;
-  /* Background image */
-  background-image: url("Images/3Dprinting/bg_image.jpg");
-  /* Full-screen */
-  height: 100%;
-  /* Center the background image */
-  background-position: center;
-  /* Scale and zoom in the image */
-  background-size: cover;
-  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-  position: relative;
-  /* Add a white text color to all elements inside the .bgimg container */
-  color: rgba(255, 255, 255, 0.857);
-  /* Add a font */
-  font-family: "Courier New", Courier, monospace;
-  /* Set the font-size to 25 pixels */
-  font-size: 25px;
-}
-
-/* Position text in the middle */
-.middle {
   position: absolute;
-  top: 65%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.857);
+  font-family: "Courier New", Courier, monospace;
+  height: 25%;
+  width: 30%;
+  top: 35%;
+  left: 35%;
   text-align: center;
+  font-size: 25px;
+  padding: 0;
 }
 
-/* Style the <hr> element */
 hr {
-  width: 100%;
+  width: 30%;
 }
