@@ -29,6 +29,11 @@ body {
   background: rgb(3, 3, 4);
 }
 
+.navbar a:hover {
+  transform: translateY(5px);
+  transition: 0.2s;
+  color: rgba(232, 8, 8, 0.775);
+}
 /* Header */
 .header {
   display: grid;
@@ -163,13 +168,17 @@ body {
 #turbine,
 #entp,
 #cognos {
-  position: absolute;
+  position: sticky;
+  z-index: 1000;
   display: none;
-  top: 15%;
-  left: 15%;
-  width: 70%;
+  top: 10%;
+  left: 10%;
+  right: 15%;
+  width: 80%;
+
   border: 2px solid rgba(255, 0, 0, 0.357);
   background-color: rgba(199, 189, 197, 0.974);
+  border-radius: 10px;
   cursor: pointer;
 }
 
