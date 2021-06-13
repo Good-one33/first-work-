@@ -7,15 +7,17 @@
     <title>Abdelmalek_BENALI :)</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* body {
-        background-image: url("monMondeuh_pic_0.jpg");
-        background-repeat: no-repeat;
-
-        background-size: 100%;
-      } */
-
+      #background {
+        z-index: -100;
+        position: absolute;
+        width: 100%;
+        /* min-width: 100%; */
+      }
       .myBook {
-        padding: 10%;
+        z-index: 2;
+        width: 80%;
+        margin-top: 20%;
+        margin-left: 5%;
       }
       .page {
         background-color: #777;
@@ -28,6 +30,17 @@
         text-align: left;
         font-size: 15px;
         border-radius: 5px;
+      }
+      .idea {
+        padding: 0 18px;
+        max-height: 0;
+        width: 300px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+        color: rgb(0, 0, 0);
+        font-family: Sentinel SSm A;
+        font-size: 16px;
       }
 
       .active,
@@ -46,32 +59,23 @@
       .active:after {
         content: "\2212";
       }
-
-      .idea {
-        padding: 0 18px;
-        max-height: 0;
-        width: 500px;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        background-color: #f1f1f1;
-        color: rgb(0, 0, 0);
-        font-family: Sentinel SSm A;
-        font-size: 16px;
-      }
     </style>
   </head>
   <body>
-    <header>
-      <!-- <video id="myVideo" muted loop autoplay>
-        <source src="/videos/pexels-rfa-6577871.mp4" type="video/mp4" />
-        Oups y a un souci avec la video :(
-      </video> -->
-      <div class="navbar">
-        <a href="/mon-site/index.html">Home </a>
-        <a href="/mon-site/personalProject.html">3D Printing</a>
-        <a href="#">black box </a>
-      </div>
-    </header>
+    <video id="myVideo" muted loop autoplay>
+      <source src="/videos/pexels-rfa-6577871.mp4" type="video/mp4" />
+      Oups y a un souci avec la video :(
+    </video>
+
+    <!-- navBar ------------------------------------------------->
+    <div class="navbar">
+      <a href="/mon-site/index.html">Home </a>
+      <a href="/mon-site/personalProject.html">3D Printing</a>
+      <a href="#">black box </a>
+    </div>
+
+    <!-- background & book----------------------------------------->
+    <div id="background"></div>
     <div class="myBook">
       <button class="page">#0</button>
       <div class="idea">
@@ -117,6 +121,8 @@
         and go to sleep now! tomorow will be a great day :)
       </div>
     </div>
+
+    <!-- script ---------------------------------------------------->
     <script>
       var page = document.getElementsByClassName("page");
       var i;
@@ -132,6 +138,18 @@
           }
         });
       }
+    </script>
+    <script src="bodymovin.js"></script>
+    <script>
+      // animation de beinvenue
+      var animation = bodymovin.loadAnimation({
+        container: document.getElementById("background"),
+        path: "blackBox.json",
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        name: "Demo ",
+      });
     </script>
   </body>
 </html>
