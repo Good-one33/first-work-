@@ -11,6 +11,7 @@
         z-index: -100;
         position: absolute;
         width: 100%;
+
         /* min-width: 100%; */
       }
       .myBook {
@@ -63,7 +64,7 @@
   </head>
   <body>
     <video id="myVideo" muted loop autoplay>
-      <source src="/videos/pexels-rfa-6577871.mp4" type="video/mp4" />
+      <source src="\mon-site\videos\pexels-rfa-6577871.mp4" type="video/mp4" />
       Oups y a un souci avec la video :(
     </video>
 
@@ -139,12 +140,12 @@
         });
       }
     </script>
-    <script src="bodymovin.js"></script>
+    <script src="\mon-site\bodymovin.js"></script>
     <script>
       // animation de beinvenue
       var animation = bodymovin.loadAnimation({
         container: document.getElementById("background"),
-        path: "blackBox.json",
+        path: "\mon-site\blackBox.json",
         renderer: "svg",
         loop: true,
         autoplay: true,
