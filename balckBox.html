@@ -17,7 +17,7 @@
       .myBook {
         z-index: 2;
         width: 80%;
-        margin-top: 20%;
+        margin-top: 50%;
         margin-left: 5%;
       }
       .page {
@@ -46,9 +46,10 @@
 
       .active,
       .page:hover {
-        background-color: #555;
+        background-color: rgb(29, 119, 103);
       }
 
+      /* ajout d'un elment factice  */
       .page:after {
         content: "\002B";
         color: rgba(206, 30, 30, 0.761);
@@ -59,15 +60,20 @@
 
       .active:after {
         content: "\2212";
+        color:blue;
       }
     </style>
   </head>
   <body>
+
+
+
+
+    <!-- background video -->
     <video id="myVideo" muted loop autoplay>
       <source src="\mon-site\videos\pexels-rfa-6577871.mp4" type="video/mp4" />
       Oups y a un souci avec la video :(
     </video>
-
     <!-- navBar ------------------------------------------------->
     <div class="navbar">
       <a href="/mon-site/index.html">Home </a>
@@ -77,6 +83,8 @@
 
     <!-- background & book----------------------------------------->
     <div id="background"></div>
+
+    
     <div class="myBook">
       <button class="page">#0</button>
       <div class="idea">
@@ -121,7 +129,18 @@
         again and work on your handstand I know you like that so just keep calme
         and go to sleep now! tomorow will be a great day :)
       </div>
+
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- script ---------------------------------------------------->
     <script>
@@ -131,7 +150,7 @@
       for (i = 0; i < page.length; i++) {
         page[i].addEventListener("click", function () {
           this.classList.toggle("active");
-          var idea = this.nextElementSibling;
+          var idea = this.nextElementSibling; 
           if (idea.style.maxHeight) {
             idea.style.maxHeight = null;
           } else {
