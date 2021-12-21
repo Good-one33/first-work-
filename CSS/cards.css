@@ -14,32 +14,32 @@
 }
 
 #catiaCard {
-  background-image: url("catia.png");
+  background-image: url("Images/Cards/catia.png");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 #solidWorksCard {
-  background-image: url("solidWorksCard.jpg");
+  background-image: url("Images/Cards/solidWorksCard.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 #htmlCssJsCard {
-  background-image: url("html_ccs_js_card.jpg");
+  background-image: url("Images/Cards/html_ccs_js_card.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 #sqlCard {
-  background-image: url("sql.jpg");
+  background-image: url("Images/Cards/sql.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 
 #javaCard {
-  background-image: url("javaCard.jpg");
+  background-image: url("Images/Cards/javaCard.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
