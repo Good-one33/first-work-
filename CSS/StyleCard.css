@@ -14,7 +14,7 @@
 }
 
 #catiaCard {
-  background-image: url("/mon-site/Images\Cards\catia.png");
+  background-image: url("/mon-site/Images/Cards/catia.png");
 
   margin: -2rem;
   height: 214px;
@@ -40,7 +40,7 @@
 }
 
 #javaCard {
-  background-image: url('/mon-site/Images\Cards\javaCard.jpg'); 
+  background-image: url("/mon-site/Images/Cards/javaCard.jpg"); 
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
