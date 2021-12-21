@@ -3,7 +3,7 @@
   display: flex;
 }
 .card {
-  background-color: aquamarine;
+  background-color: rgb(52, 155, 115);
   color: rgb(10, 10, 10);
   border-radius: 8px;
   padding: 2rem;
@@ -14,13 +14,14 @@
 }
 
 #catiaCard {
-  background-image: url("Images/Cards/catia.png");
+  background-image: url("");
+
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 #solidWorksCard {
-  background-image: url("Images/Cards/solidWorksCard.jpg");
+  background-image: url("/mon-site/Images/Cards/solidWorksCard.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
@@ -39,7 +40,7 @@
 }
 
 #javaCard {
-  background-image: url("Images/Cards/javaCard.jpg");
+  background-image: url('Images/Cards/java'); 
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
