@@ -14,7 +14,7 @@
 }
 
 #catiaCard {
-  background-image: url("");
+  background-image: url("/mon-site/Images/Cards/catia");
 
   margin: -2rem;
   height: 214px;
@@ -27,20 +27,20 @@
   border-radius: 8px;
 }
 #htmlCssJsCard {
-  background-image: url("Images/Cards/html_ccs_js_card.jpg");
+  background-image: url("/mon-site/Images/Cards/html_ccs_js_card.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 #sqlCard {
-  background-image: url("Images/Cards/sql.jpg");
+  background-image: url("/mon-site/Images/Cards/sql.jpg");
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
 }
 
 #javaCard {
-  background-image: url('Images/Cards/java'); 
+  background-image: url('/mon-site/Images/Cards/java'); 
   margin: -2rem;
   height: 214px;
   border-radius: 8px;
