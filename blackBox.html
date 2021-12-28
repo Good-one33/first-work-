@@ -6,82 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelmalek_BENALI :)</title>
     <link rel="stylesheet" href="CSS/styles.css" />
-
-    <style>
-       /* contenu entier de la page  */
-        #mainContent{
-            display: grid;
-            grid-template-rows:300px  100px 1fr 100px; 
-            padding: 5px; 
-            /* border: rgb(197, 61, 61) solid 6px; */
-          }
-        /* text en haut    */
-      #animationBackground{      
-       /* border:red solid 1px; */
-        width: 100%;
-        height: 100%;}  
-        
-      
-      .pageContent {      
-        max-height: 0;
-        max-width: 0;
-        overflow: hidden;
-        }
-      
-      .hListe{
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x:auto;
-        overflow-y:hidden;
-        align-items: center;  
-        /* border:green solid 3px; */
-      }
-
-      .button{
-        flex:0 0 auto;
-        background-color: #777;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;        
-        border-radius: 5px;
-        margin: 10px;   
-        text-align: center; 
-        padding-top: 10px;         
-      }         
-      .button:hover{
-        background-color: rgb(17, 95, 72);
-        color:rgb(253, 253, 253);
-        }
-      #displayContent{
-        display: block;
-        padding: 20px ;
-        align-items: center;
-        overflow: hidden;
-        background-color: #f7f7f7;
-        color: rgb(0, 0, 0);
-        font-family: Sentinel SSm A;
-        font-size: 16px;
-        justify-self: center;
-        width: 300px;
-        /* border: solid orange 4px; */
-        box-shadow: 15px 15px  40px rgb(31, 29, 29)
-            }
-      
-    </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-
-        
-
-
-          $(".button").click(function(){
-            let i = $(this).attr('id');            
-            $("#displayContent").html($("#pc"+i).html());    
-          });        
-      });
-    </script>
+    <link rel="stylesheet" href="Css/styleBlackBox.css">
+    
 </head>
 
 <body>
@@ -243,25 +169,33 @@
                 <div id="pc6" class="pageContent">
                   <h2>I am back</h2>
                   <p>bah!   t'as mis du temps mais ça va ! l'essentiel que t'es là <b> :p</b></p>
-                  
+                 
+                  <button type="button" onclick="displayDate()">Display Date</button>
                 </div>
 
           </div>  
     </div>   
+      <script>
+              
+function displayDate() {
+    document.getElementById("pc6").innerHTML = Date();
+// test function 
+  }
+      </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jsBlackBox.js"></script>
+    <script src="JS/bodymovin.js"></script>
+    <script>
+        // blackBoxWelcomeAnimation de beinvenue
+        var animation = bodymovin.loadAnimation({
+          container: document.getElementById("animationBackground"),
+          path: "Bodymovin/blackBoxWelcomeAnimation.json",
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          name: "Demo ",
+        });
+    </script>  
 </body>
-
-<script src="JS/bodymovin.js"></script>
-<script>
-    // blackBoxWelcomeAnimation de beinvenue
-    var animation = bodymovin.loadAnimation({
-      container: document.getElementById("animationBackground"),
-      path: "Bodymovin/blackBoxWelcomeAnimation.json",
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      name: "Demo ",
-    });
-</script>
-
 </html>
