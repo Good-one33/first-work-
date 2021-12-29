@@ -28,7 +28,7 @@
         /* border:green solid 3px; */
       }
 
-      .button{
+      .btn{
         flex:0 0 auto;
         background-color: #777;
         cursor: pointer;
@@ -39,7 +39,7 @@
         text-align: center; 
         padding-top: 10px;         
       }         
-      .button:hover{
+      .btn:hover{
         background-color: rgb(17, 95, 72);
         color:rgb(253, 253, 253);
         }

@@ -1,20 +1,19 @@
 
-    
-     function displayDate() {
-        document.getElementById("demo").innerHTML = Date();
-        document.getElementById("demo2").style.color = "red";
-      }
-
- function myFunction(){
-    document.getElementById("demo2").style.color = "blue";
- }
-     
- 
-
- // don't forget the ready fucnciton !!
+// the ready fucnciton !!
  $(document).ready(function(){
-   $(".button").click(function(){
+  
+  $(".btn").click(function(){
      let i = $(this).attr('id');            
-     $("#displayContent").html($("#pc"+i).html());    
-   });        
+     $("#displayContent").html($("#pc"+i).html()); 
+   });     
+  });
+
+  // blackBoxWelcomeTextAnimation
+ var animation = bodymovin.loadAnimation({
+  container: document.getElementById("animationBackground"),
+  path: "Bodymovin/blackBoxWelcomeAnimation.json",
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  name: "Demo ",
 });
