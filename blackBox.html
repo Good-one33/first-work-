@@ -226,8 +226,8 @@
           </div>
           <button id="click2">click2</button><br />
 
-          <button id="click3">right</button>
-          <button id="click4">left</button>
+          <button id="click3">left</button>
+          <button id="click4">right</button>
           <button id="click5">up</button>
           <button id="click6">down</button>
 
@@ -241,6 +241,8 @@
             "
           ></div>
 
+          <p>Name: <input type="text" name="user" /></p>
+          <button id="click7">ok!</button>
           <!-- ssssssssss -->
           <script>
             $(document).ready(function () {
@@ -269,6 +271,26 @@
               });
               $("#click6").click(function () {
                 $("#pc6T3").animate({ top: "+=10px" });
+              });
+
+              $("#click7").click(function () {
+                let textInput = $("input:text").val();
+                $("#pc6T3").text(textInput + " :)");
+                $("#pc6T3").animate(
+                  {
+                    left: "111px",
+                    height: "20px",
+                    width: "70px",
+                  },
+                  5555
+                );
+                $("#pc6T3").css({ color: "red", background: "aqua" });
+
+                alert(
+                  "Hello " +
+                    textInput +
+                    "  your name is in the box  \n enjoy :)"
+                );
               });
             });
           </script>
