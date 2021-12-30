@@ -241,7 +241,16 @@
             "
           ></div>
 
-          <p>Name: <input type="text" name="user" /></p>
+          <p>Name: <input type="text" id="name" /></p>
+          <p>
+            Profession:
+            <input type="text" id="profession" />
+          </p>
+          <p>
+            date of birth:
+            <input type="date" id="dateBirth" />
+          </p>
+          <br />
           <button id="click7">ok!</button>
 
           <div id="pc6T4"></div>
@@ -250,9 +259,9 @@
             $(document).ready(function () {
               $("#click1").click(function () {
                 $("#pc6T1").css({
-                  color: "yellow",
-                  background: "pink",
-                  "font-size": "80%",
+                  color: "black",
+                  background: "DeepSkyBlue",
+                  "font-size": "110%",
                 });
               });
 
@@ -276,30 +285,51 @@
               });
 
               $("#click7").click(function () {
-                let textInput = $("input:text").val();
-                $("#pc6T3").text(textInput + " :)");
+                $("#pc6T3").text($("#name").val() + " added");
+                $("#pc6T3")
+                  .animate(
+                    {
+                      left: "111px",
+                      height: "20px",
+                      width: "100px",
+                    },
+                    1333
+                  )
+                  .css({ color: "green", background: "aqua" });
+
+                let person = {
+                  name: $("#name").val(),
+                  profession: $("#profession").val(),
+                  dateBirth: $("#dateBirth").val(),
+                };
+
+                groupPerson.unshift(person);
+                let txt = "";
+                for (let i = 0; i < groupPerson.length; i++) {
+                  txt +=
+                    groupPerson[i].name +
+                    "___" +
+                    groupPerson[i].profession +
+                    "___" +
+                    groupPerson[i].dateBirth +
+                    " <br>";
+                }
+                $("#pc6T4").html(txt);
+
+                $("#name").val("");
+                $("#profession").val("");
+                $("#dateBirth").val("");
                 $("#pc6T3").animate(
                   {
-                    left: "111px",
+                    left: "0px",
                     height: "20px",
-                    width: "70px",
+                    width: "100px",
                   },
-                  5555
+                  1333
                 );
-                $("#pc6T3").css({ color: "red", background: "aqua" });
-                alert(
-                  "Hello " +
-                    textInput +
-                    "  your name is in the box  \n enjoy :)"
-                );
-
-                listName.unshift(textInput);
-                $("#pc6T4").html(listName);
               });
 
-              let listName = ["malik ", "moh ", "tarik "];
-
-              $("#pc6T4").html(listName);
+              let groupPerson = [];
             });
           </script>
         </div>
