@@ -243,6 +243,8 @@
 
           <p>Name: <input type="text" name="user" /></p>
           <button id="click7">ok!</button>
+
+          <div id="pc6T4"></div>
           <!-- ssssssssss -->
           <script>
             $(document).ready(function () {
@@ -285,13 +287,19 @@
                   5555
                 );
                 $("#pc6T3").css({ color: "red", background: "aqua" });
-
                 alert(
                   "Hello " +
                     textInput +
                     "  your name is in the box  \n enjoy :)"
                 );
+
+                listName.unshift(textInput);
+                $("#pc6T4").html(listName);
               });
+
+              let listName = ["malik ", "moh ", "tarik "];
+
+              $("#pc6T4").html(listName);
             });
           </script>
         </div>
