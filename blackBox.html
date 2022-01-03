@@ -313,7 +313,10 @@
                     "___" +
                     groupPerson[i].dateBirth +
                     " <br>";
+                  let objString = JSON.stringify(groupPerson[i]);
                 }
+
+                console.log(groupPerson);
                 $("#pc6T4").html(txt);
 
                 $("#name").val("");
@@ -333,9 +336,38 @@
             });
           </script>
         </div>
+
         <!-- page 7 _21_12_2021_-->
         <div id="pc7" class="pageContent">
-          <h4>I am an empty box , comeback the next day</h4>
+          <div id="demo"></div>
+          <div id="input">
+            <p>it's your first time here please enter your name</p>
+            <input type="text" id="pc7name" />
+            <button id="click1">ok!</button>
+          </div>
+
+          <script>
+            function addName() {
+              let testName = localStorage.getItem("name");
+              if (testName == null) {
+                $("#input").show();
+                $("#click1").click(function () {
+                  let input = $("#pc7name").val();
+                  localStorage.setItem("name", input);
+                  $("#input").text(
+                    "hello " +
+                      localStorage.getItem("name") +
+                      "  nice to join us !"
+                  );
+                });
+              } else {
+                $("#demo").text("welcome back " + testName + " :)");
+              }
+            }
+
+            $("#input").hide();
+            addName();
+          </script>
         </div>
       </div>
     </div>
