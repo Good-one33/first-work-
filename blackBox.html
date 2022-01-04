@@ -339,32 +339,56 @@
 
         <!-- page 7 _21_12_2021_-->
         <div id="pc7" class="pageContent">
-          <div id="demo"></div>
+          <div id="demo">coucou c'est moi</div>
           <div id="input">
-            <p>it's your first time here please enter your name</p>
-            <input type="text" id="pc7name" />
+            <p>It's your first time here, please let we know more about you</p>
+            <p>Name: <input type="text" id="pc7Name" /></p>
+            <p>age: <input type="number" id="pc7Age" /></p>
+            <p>gender: <input type="text" id="pc7Gender" /></p>
+            <p>color you like: <input type="color" id="pc7Color" /></p>
+
             <button id="click1">ok!</button>
           </div>
 
           <script>
             function addName() {
-              let testName = localStorage.getItem("name");
-              if (testName == null) {
+              let verify = localStorage.getItem("user");
+
+              if (verify == null) {
                 $("#input").show();
                 $("#click1").click(function () {
-                  let input = $("#pc7name").val();
-                  localStorage.setItem("name", input);
+                  let inName = $("#pc7Name").val();
+                  let inAge = $("#pc7Age").val();
+                  let inGender = $("#pc7Gender").val();
+                  let inColor = $("#pc7Color").val();
+
+                  let user = {
+                    name: inName,
+                    age: inAge,
+                    gender: inGender,
+                    color: inColor,
+                  };
+                  localStorage.setItem("user", JSON.stringify(user));
+                  let userObject = JSON.parse(localStorage.getItem("user"));
+
                   $("#input").text(
-                    "hello " +
-                      localStorage.getItem("name") +
-                      "  nice to join us !"
+                    " Thanks " + userObject.name + " for joining us !"
                   );
                 });
               } else {
-                $("#demo").text("welcome back " + testName + " :)");
+                let userObject = JSON.parse(localStorage.getItem("user"));
+
+                $("#demo").text(
+                  " welcome back " +
+                    userObject.name +
+                    " we know your are  !" +
+                    userObject.age +
+                    " years old"
+                );
+                $("#demo").show();
               }
             }
-
+            $("#demo").hide();
             $("#input").hide();
             addName();
           </script>
