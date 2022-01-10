@@ -338,11 +338,22 @@
         </div>
         <!-- page 7 _21_12_2021_-->
         <div id="pc7" class="pageContent">
+          <div id="demo1"></div>
           <div id="demo">coucou c'est moi</div>
           <div id="input">
             <p>It's your first time here, please let we know more about you</p>
             <p>Name: <input type="text" id="pc7Name" /></p>
             <p>age: <input type="number" id="pc7Age" /></p>
+
+            <p>
+              current mode
+              <select name=" currentMode" id="pc7Mode">
+                <option value="good">good</option>
+                <option value="very good">very good</option>
+                <option value="normal">normal</option>
+                <option value="bad">bad</option>
+              </select>
+            </p>
             <p>
               <input name="gender" value="male" type="radio" id="rb1" /> male
               <input
@@ -360,6 +371,7 @@
           </div>
 
           <script>
+            // function to get the value from radio buttons
             function check() {
               if ($("#rb1").prop("checked") == true)
                 return $("#rb1").attr("value");
@@ -369,23 +381,29 @@
                 alert(" please select gender");
               }
             }
-
+            //  function to get user input and store them in js object and do some other stuff with data
             function addName() {
               let verify = localStorage.getItem("user");
 
               if (verify == null) {
                 $("#input").show();
+
+                // get input on a click
                 $("#click1").click(function () {
                   let inName = $("#pc7Name").val();
                   let inAge = $("#pc7Age").val();
                   let inGender = check();
                   let inColor = $("#pc7Color").val();
-
+                  let mode = document.getElementById("pc7Mode");
+                  let inCurrentMode = mode.options[mode.selectedIndex].value; // I will do it later on pure jquery
+                  //store them in js object in local storage
                   let user = {
                     name: inName,
                     age: inAge,
                     gender: inGender,
                     color: inColor,
+                    currentMode: inCurrentMode,
+                    countVisit: 0,
                   };
                   localStorage.setItem("user", JSON.stringify(user));
                   let userObject = JSON.parse(localStorage.getItem("user"));
@@ -396,48 +414,44 @@
                 });
               } else {
                 let userObject = JSON.parse(localStorage.getItem("user"));
+                userObject.countVisit++;
 
-                $("#demo").text(
-                  " welcome back " +
-                    userObject.name +
-                    " we know your are  " +
-                    userObject.age +
-                    " years old and your are a " +
-                    userObject.gender
-                );
-                $("#demo").css("background", "Aqua");
+                $("#demo")
+                  .text(
+                    "  welcome back " +
+                      userObject.name +
+                      " we know your are  " +
+                      userObject.age +
+                      " years old and your are a " +
+                      userObject.gender +
+                      ", mode is " +
+                      userObject.currentMode
+                  )
+                  .css("background", userObject.color)
+                  .show();
 
-                $("#demo").show();
+                $("#demo1")
+                  .text("visit number " + localStorage.getItem("visit"))
+                  .css("background", "aqua")
+                  .show();
               }
             }
+
+            function visit() {
+              let visitCount = localStorage.getItem("visit");
+
+              visitCount++;
+              localStorage.setItem("visit", visitCount);
+            }
             $("#demo").hide();
+
             $("#input").hide();
             addName();
+            visit();
           </script>
         </div>
         <!-- page 8 _05_01_2021_-->
-        <div id="pc8" class="pageContent">
-          <input name="gender" value="male" type="radio" id="rb1" /> male <br />
-          <input name="gender" value="female" type="radio" id="rb2" /> female
-          <br />
-          <button id="b1" onclick="fill()">click</button>
-          <div id="demo"></div>
-
-          <script>
-            function check() {
-              $("#demo").css("color", "red");
-              if ($("#rb1").prop("checked") == true)
-                return $("#rb1").attr("value");
-              else if ($("#rb2").prop("checked") == true)
-                return $("#rb2").attr("value");
-              else alert(" please select gender");
-            }
-
-            function fill() {
-              $("#demo").html(check());
-            }
-          </script>
-        </div>
+        <div id="pc8" class="pageContent"></div>
       </div>
     </div>
     <script src="JS/jsBlackBox.js"></script>
