@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdelmalek_BENALI :)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="JS/bodymovin.js"></script>
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <link rel="stylesheet" href="CSS/styleBlackBox.css" />
+    <script src="js/bodymovin.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cssBlackBox.css" />
   </head>
 
   <body>
@@ -41,7 +41,7 @@
         <div id="6" class="btn">6</div>
         <div id="7" class="btn">7</div>
         <div id="8" class="btn">8</div>
-        <div id="!" class="btn">!</div>
+        <div id="9" class="btn">9</div>
       </div>
 
       <!-- fenetre d'affichage du contenu---------------------->
@@ -206,148 +206,16 @@
         </div>
         <!-- page 6 _21_12_2021_-->
         <div id="pc6" class="pageContent">
-          <h2>I am back</h2>
-          <div id="pc6T1">
-            <p>
-              bah! t'as mis du temps mais ça va ! l'essentiel que t'es là
-              <b> :p</b>
-            </p>
-            <p>
-              it took me a lot of time to relise that the only way to make
-              things done is making them by myself
-            </p>
-          </div>
-          <button id="click1">Click1</button>
-
-          <div id="pc6T2">
-            <p id="bonText">
-              je suis un text qui fait du bien a celui qui me lit voila !
-            </p>
-          </div>
-          <button id="click2">click2</button><br />
-
-          <button id="click3">left</button>
-          <button id="click4">right</button>
-          <button id="click5">up</button>
-          <button id="click6">down</button>
-
-          <div
-            id="pc6T3"
-            style="
-              background: #98bf21;
-              height: 50px;
-              width: 50px;
-              position: relative;
-            "
-          ></div>
-
-          <p>Name: <input type="text" id="name" /></p>
-          <p>
-            Profession:
-            <input type="text" id="profession" />
-          </p>
-          <p>
-            date of birth:
-            <input type="date" id="dateBirth" />
-          </p>
-          <br />
-          <button id="click7">ok!</button>
-
-          <div id="pc6T4"></div>
-          <!-- ssssssssss -->
-          <script>
-            $(document).ready(function () {
-              $("#click1").click(function () {
-                $("#pc6T1").css({
-                  color: "black",
-                  background: "DeepSkyBlue",
-                  "font-size": "110%",
-                });
-              });
-
-              $("#bonText").hide();
-              $("#click2").click(function () {
-                $("#bonText").toggle(3333);
-                $("#bonText").css("color", "red");
-              });
-
-              $("#click3").click(function () {
-                $("#pc6T3").animate({ left: "-=10px" });
-              });
-              $("#click4").click(function () {
-                $("#pc6T3").animate({ left: "+=10px" });
-              });
-              $("#click5").click(function () {
-                $("#pc6T3").animate({ top: "-=10px" });
-              });
-              $("#click6").click(function () {
-                $("#pc6T3").animate({ top: "+=10px" });
-              });
-
-              $("#click7").click(function () {
-                $("#pc6T3").text($("#name").val() + " added");
-                $("#pc6T3")
-                  .animate(
-                    {
-                      left: "111px",
-                      height: "20px",
-                      width: "100px",
-                    },
-                    1333
-                  )
-                  .css({ color: "green", background: "aqua" });
-
-                let person = {
-                  name: $("#name").val(),
-                  profession: $("#profession").val(),
-                  dateBirth: $("#dateBirth").val(),
-                };
-
-                groupPerson.unshift(person);
-                let txt = "";
-                for (let i = 0; i < groupPerson.length; i++) {
-                  txt +=
-                    groupPerson[i].name +
-                    "___" +
-                    groupPerson[i].profession +
-                    "___" +
-                    groupPerson[i].dateBirth +
-                    " <br>";
-                  let objString = JSON.stringify(groupPerson[i]);
-                }
-
-                console.log(groupPerson);
-                $("#pc6T4").html(txt);
-
-                $("#name").val("");
-                $("#profession").val("");
-                $("#dateBirth").val("");
-                $("#pc6T3").animate(
-                  {
-                    left: "0px",
-                    height: "20px",
-                    width: "100px",
-                  },
-                  1333
-                );
-              });
-
-              let groupPerson = [];
-            });
-          </script>
-        </div>
-        <!-- page 7 _21_12_2021_-->
-        <div id="pc7" class="pageContent">
-          <div id="demo1"></div>
-          <div id="demo">coucou c'est moi</div>
-          <div id="input">
+          <div id="pc6demo1"></div>
+          <div id="pc6demo">coucou c'est moi</div>
+          <!-- input  -->
+          <div id="pc6input">
             <p>It's your first time here, please let we know more about you</p>
-            <p>Name: <input type="text" id="pc7Name" /></p>
-            <p>age: <input type="number" id="pc7Age" /></p>
-
+            <p>Name: <input type="text" id="pc6Name" /></p>
+            <p>age: <input type="number" id="pc6Age" /></p>
             <p>
               current mode
-              <select name=" currentMode" id="pc7Mode">
+              <select name=" currentMode" id="pc6Mode">
                 <option value="good">good</option>
                 <option value="very good">very good</option>
                 <option value="normal">normal</option>
@@ -355,105 +223,75 @@
               </select>
             </p>
             <p>
-              <input name="gender" value="male" type="radio" id="rb1" /> male
-              <input
+            <input name="gender" value="male" type="radio" id="pc6rb1"/> male
+            <input
                 name="gender"
                 value="female"
                 type="radio"
-                id="rb2"
+                id="pc6rb2"
                 checked
               />
               female
             </p>
-            <p>color you like: <input type="color" id="pc7Color" /></p>
-
-            <button id="click1">ok!</button>
+            <p>color you like: <input type="color" id="pc6Color" /></p>
+            <button id="pc6click1">ok!</button>
           </div>
-
-          <script>
-            // function to get the value from radio buttons
-            function check() {
-              if ($("#rb1").prop("checked") == true)
-                return $("#rb1").attr("value");
-              else if ($("#rb2").prop("checked") == true)
-                return $("#rb2").attr("value");
-              else {
-                alert(" please select gender");
-              }
-            }
-            //  function to get user input and store them in js object and do some other stuff with data
-            function addName() {
-              let verify = localStorage.getItem("user");
-
-              if (verify == null) {
-                $("#input").show();
-
-                // get input on a click
-                $("#click1").click(function () {
-                  let inName = $("#pc7Name").val();
-                  let inAge = $("#pc7Age").val();
-                  let inGender = check();
-                  let inColor = $("#pc7Color").val();
-                  let mode = document.getElementById("pc7Mode");
-                  let inCurrentMode = mode.options[mode.selectedIndex].value; // I will do it later on pure jquery
-                  //store them in js object in local storage
-                  let user = {
-                    name: inName,
-                    age: inAge,
-                    gender: inGender,
-                    color: inColor,
-                    currentMode: inCurrentMode,
-                    countVisit: 0,
-                  };
-                  localStorage.setItem("user", JSON.stringify(user));
-                  let userObject = JSON.parse(localStorage.getItem("user"));
-
-                  $("#input").text(
-                    " Hello " + userObject.name + "Thanks  for joining us !"
-                  );
-                });
-              } else {
-                let userObject = JSON.parse(localStorage.getItem("user"));
-                userObject.countVisit++;
-
-                $("#demo")
-                  .text(
-                    "  welcome back " +
-                      userObject.name +
-                      " we know your are  " +
-                      userObject.age +
-                      " years old and your are a " +
-                      userObject.gender +
-                      ", mode is " +
-                      userObject.currentMode
-                  )
-                  .css("background", userObject.color)
-                  .show();
-
-                $("#demo1")
-                  .text("visit number " + localStorage.getItem("visit"))
-                  .css("background", "aqua")
-                  .show();
-              }
-            }
-
-            function visit() {
-              let visitCount = localStorage.getItem("visit");
-
-              visitCount++;
-              localStorage.setItem("visit", visitCount);
-            }
-            $("#demo").hide();
-
-            $("#input").hide();
-            addName();
-            visit();
-          </script>
+       
+        </div>
+        <!-- page 7 _21_12_2021_-->
+        <div id="pc7" class="pageContent">
+          <div id="pc7txt1">this is a text</div>
+          <br />
+          <br />
+          <button id="pc7btn1">OK!</button>
+         
         </div>
         <!-- page 8 _05_01_2021_-->
-        <div id="pc8" class="pageContent"></div>
-      </div>
+        <div id="pc8" class="pageContent">
+          <script
+            src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"
+          ></script>
+
+          <p>
+            <i
+              class="fas fa-dragon"
+              style="
+                font-size: 150px;
+                color: rgb(33, 49, 44);
+                background-color: chocolate;
+              "
+            ></i>
+            je suis un dragon hahah
+          </p>
+          <p>Styled Font Awesome icons (size and color):</p>
+          <i class="fas fa-spider" style="font-size: px; color: red"></i>
+          <i class="fas fa-cat" style="font-size: 36px"></i>
+          <i class="fas fa-cloud" style="font-size: 60px; color: aqua"></i>
+          <i class="fas fa-cloud" style="font-size: 60px; color: lightblue"></i>
+        </div>
+        <!-- page 9 _12_01_2021_-->
+        <div id="pc9" class="pageContent">
+         <div id="pc9test" > hello this is me </div>
+         <br>
+         <br>
+         <button id="pc9btn1"> ok</button>
+
+         
+        </div>
+      
     </div>
-    <script src="JS/jsBlackBox.js"></script>
+    <script>
+      // blackBoxWelcomeTextAnimation
+     var animation = bodymovin.loadAnimation({
+      container: document.getElementById("animationBackground"),
+      path: "Bodymovin/blackBoxWelcomeAnimation.json",
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      name: "Demo ",
+    });
+    </script>
+    <script src="js/jsBlackBox.js"></script>
   </body>
 </html>
