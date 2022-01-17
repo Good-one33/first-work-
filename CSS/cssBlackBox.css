@@ -93,14 +93,15 @@
 .personOne {
   font-family: Georgia, serif;
   color: black;
-  text-align: justify;
+  /* text-align: justify; */
   text-indent: 10px;
 }
 
 .personTwo {
   font-family: Georgia, serif;
   color: black;
-  text-align: justify;
+  /* text-align: justify; */
   text-indent: 10px;
+  text-shadow: 2px 2px 4px rgb(175, 160, 160);
   /* font-style: italic; */
 }
