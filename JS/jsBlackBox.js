@@ -1,9 +1,34 @@
 
 // the ready fucnciton !!
  $(document).ready(function(){
+
+ for(var i=0; i<12 ; i+=2){
+  var animationTen = bodymovin.loadAnimation({
+    container: document.getElementById(i),
+    path: "https://assets7.lottiefiles.com/temp/lf20_D0nz3r.json",
+    renderer: "svg",
+    loop: true,
+    autoplay:true,
+    name: "Demo ",
+  });
+ }
+
+ for(var i=1; i<12 ; i+=2){
+  var animationTen = bodymovin.loadAnimation({
+    container: document.getElementById(i),
+    path: "https://maxst.icons8.com/vue-static/landings/animated-icons/icons/book/book.json",
+    renderer: "svg",
+    loop: true,
+    autoplay:true,
+    name: "Demo ",
+  });
+ }
   
+  
+
+
 // switch betwen boxes 
-$(".btn").click(function(){
+$(".box").click(function(){
  let i = $(this).attr('id');            
  $("#displayContent").html($("#pc"+i).html()); 
 
@@ -104,8 +129,43 @@ $("#pc9test").addClass("testClass2");
 });
 
 
+//////--------- pc10 --------\\\\\\          
+ 
+    var container = document.getElementById('pc10container');
+    var state = 'play';
+    var animationOne = bodymovin.loadAnimation(
+      {
+      container: container,
+      path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/pause/pause.json',
+      renderer: 'svg',
+      loop: false,
+      autoplay:false,
+      name: "Demo Animation",
+      });
 
-});
+      animationOne.goToAndStop(14, true);
+
+      container.addEventListener('click', () => {
+        if(state === 'play') {
+         animationOne.playSegments([14, 27], true);
+          state = 'pause';
+        } else {
+          animationOne.playSegments([0, 14], true);
+          state = 'play';
+        }
+      });
+      
+     
+      // $("#pc10container").hide();
+      $("#btn").click( function(){
+        $("#pc10container").toggle();   
+      
+    });
+
+
+
+
+}); // the ready and the switch funct's end
 }); 
    
    

@@ -27,7 +27,7 @@
   /* border:green solid 3px; */
 }
 
-.btn {
+.box {
   flex: 0 0 auto;
   background-color: #777;
   cursor: pointer;
@@ -39,7 +39,7 @@
   padding-top: 10px;
   position: static;
 }
-.btn:hover {
+.box:hover {
   background-color: rgb(17, 95, 72);
   color: rgb(253, 253, 253);
 }
@@ -111,4 +111,10 @@
   text-indent: 10px;
   text-shadow: 2px 2px 4px rgb(175, 160, 160);
   /* font-style: italic; */
+}
+
+#pc10container {
+  position: relative;
+  width: 50px;
+  height: 50px;
 }
