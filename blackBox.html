@@ -7,6 +7,7 @@
     <title>Abdelmalek_BENALI :)</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
     <script src="JS/bodymovin.js"></script>
+    <script src="JS/jsBlackBox.js"></script>
     <script src="https://kit.fontawesome.com/08d03f0fd8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Trirong">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
@@ -35,17 +36,18 @@
 
       <!-- horizontal liste------------------------------------>
       <div class="hListe">
-        <div id="0" class="box"></div>
-        <div id="1" class="box"></div>
-        <div id="2" class="box"></div>
-        <div id="3" class="box"></div>
-        <div id="4" class="box"></div>
-        <div id="5" class="box"></div>
-        <div id="6" class="box"></div>
-        <div id="7" class="box"></div>
-        <div id="8" class="box"></div>
-        <div id="9" class="box"></div>
-        <div id="10" class="box"></div>
+        <div id="0" class="box" title="text">0</div>
+        <div id="1" class="box" title="code">1</div>
+        <div id="2" class="box" title="code">2</div>
+        <div id="3" class="box" title="text">3</div>
+        <div id="4" class="box" title="image">4</div>
+        <div id="5" class="box" title="text">5</div>
+        <div id="6" class="box" title="image">6</div>
+        <div id="7" class="box" title="text">7</div>
+        <div id="8" class="box" title="image">8</div>
+        <div id="9" class="box" title="code">9</div>
+        <div id="10" class="box" title="text">10</div>
+        <div id="11" class="box" title="code">11</div>
       </div>
 
       <!-- fenetre d'affichage du contenu---------------------->
@@ -288,19 +290,42 @@
          <div id="pc9test" > hello this is me </div>
          <br>
          <br>
-         <button id="pc9btn1"> ok</button>
-
-         
+         <button id="pc9btn1"> ok</button>         
         </div>
       
-        <!-- page 9 _12_01_2021_-->
+        <!-- page 10 _12_01_2021_-->
         <div id="pc10" class="pageContent">
          
            <button id="btn">show/hide</button>
            <div id="pc10container"></div>
           </div>
 
-         
+        <!-- page 11 _12_01_2021_-->
+        <div id="pc11" class="pageContent">
+              <button id="btnTest" > ok</button>
+              <button id="btnPlay" > play</button>
+
+              <div id="m1" title="text" class="toto"> this is a code</div>
+               
+
+           <script>
+
+
+                const anim = bodymovin.loadAnimation({
+                 container: document.getElementById('m1'),
+                 path: "Bodymovin/icons8-services.json",
+                 renderer: "svg",
+                 loop: true,
+                 autoplay:true
+                 });                 
+
+                  $("#btnplay").click(function(){
+                anim.play();
+              })
+                        
+             
+           </script>
+          </div> 
     </div>
     <script>
       // blackBoxWelcomeTextAnimation
@@ -313,6 +338,6 @@
       name: "Demo ",
     });
     </script>
-    <script src="JS/jsBlackBox.js"></script>
+    
   </body>
 </html>
