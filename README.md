@@ -1,2 +1,2 @@
-# my first web site !!   
+# web site for fun  !!   
 there is always a first time :)
